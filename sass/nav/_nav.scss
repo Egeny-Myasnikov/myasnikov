@@ -1,0 +1,138 @@
+@import '../otherStyles/mixins';
+@import '../otherStyles/vars';
+
+
+.main-menu {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    &__container {
+        border: none;
+        padding: 0;
+    }
+}
+
+.navigation {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.247);
+    backdrop-filter: blur(4px);
+    @include flex-center;
+    gap: 10px;
+}
+
+.item {
+    position: relative;
+    z-index: 4;
+
+    a {
+        z-index: 1;
+        display: inline-block;
+        color: $text-color;
+        position: relative;
+        padding: 20px;
+        font-family: monospace;
+        font-size: 1.3em;
+        transition: .3s;
+
+        &~.decore {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1) rotate(90deg);
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+            border-top: 0px solid $button-color-second;
+            border-bottom: 0px solid $button-color-second;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            transition: width 1s, height 1s, border-top 1s, opacity 1s, border-bottom 1s, transform .5s;
+        }
+
+        &:hover~.decore,
+        &.active~.decore {
+            opacity: 1;
+            transition: .3s;
+            transform: translate(-50%, -35%) scale(1) rotate(360deg);
+            width: 100px;
+            height: 80px;
+            border-top-width: 10px;
+            border-bottom-width: 10px;
+        }
+
+         &:hover,
+        &.active {
+            transform: translateY(20%);
+        }
+
+        &.active {
+            cursor: default;
+            color: $button-color-second;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(255, 255, 255, 0.8),
+            0 0 40px rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+
+@include media($mobile-max) {
+    .item {
+        a {
+            padding: 20px;
+            font-size: 1.1em;
+
+            &~.decore {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1) rotate(90deg);
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                border-radius: 50%;
+                border-top: 0px solid $button-color-second;
+                border-bottom: 0px solid $button-color-second;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                transition: width 1s, height 1s, border-top 1s, opacity 1s, border-bottom 1s, transform .5s;
+            }
+
+            &:hover~.decore,
+            &.active~.decore {
+                opacity: 1;
+                transition: .3s;
+                transform: translate(-50%, -35%) scale(1) rotate(360deg);
+                width: 100px;
+                height: 80px;
+                border-top-width: 10px;
+                border-bottom-width: 10px;
+            }
+
+            &:hover,
+            &.active {
+                transform: translateY(20%);
+            }
+
+            &.active {
+                cursor: default;
+                color: $button-color-second;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                    0 0 20px rgba(255, 255, 255, 0.8),
+                    0 0 30px rgba(255, 255, 255, 0.8),
+                    0 0 40px rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+// .incr,
+// .decr,
+// .defaultSize {
+// padding: 20px;
+// font-size: 1.2em;
+// cursor: pointer;
+// }

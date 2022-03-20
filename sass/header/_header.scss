@@ -1,0 +1,17 @@
+@import '../otherStyles/_mixins';
+.header {
+
+    &-container{
+        display: grid;
+
+            }
+    &-logo{
+        @include flex-center;
+        padding: 20px;
+        position: relative;
+        // background-color: rgba(255, 255, 255, 0.253);
+
+    }
+    
+}
+
