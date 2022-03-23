@@ -1,0 +1,11 @@
+@import '../otherStyles/vars'; 
+.forms {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    .link-tel{
+        color:$text-color;
+    }
+    
+}
