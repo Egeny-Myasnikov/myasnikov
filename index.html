@@ -11,45 +11,31 @@
         content="Разработка (создание) сайтов в городе Ангарске. Web-разработчик --{ Фрилансер }-- Евгений Мясников. тел.89501081773">
     <link rel="shortcut icon" href="img/icon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" type="module"></script>
     <title>Web разработчик { Фрилансер } Евгений Мясников</title>
 </head>
 
 <body>
-
-    <div id="header" class="_general-container">
-
-        <div class="main-menu">
-            <div class="main-menu__container _container">
-                <nav class="navigation">
-                    <div class="item">
-                        <a class="active" href="#header">&#8962;</a>
-                        <span class="decore"></span>
-                    </div>
-                    <!-- <div class="item">
-                        <a href="#page">PAGE</a>
-                        <span class="decore"></span>
-                    </div> -->
-                    <div class="item">
-                        <a href="#portfolio">Портфолио</a>
-                        <span class="decore"></span>
-                    </div>
-                    <!-- <div class="item">
-                        <a href="#anyPage">AnyPage</a>
-                        <span class="decore"></span>
-                    </div> -->
-                    <div class="item">
-                        <a href="#contacts">Контакты</a>
-                        <span class="decore"></span>
-                    </div>
-                </nav>
+    <div data-add-header-menu-path="main" data-add-header-menu-text="Домой" id="main" class="_general-container">
 
 
-            </div>
+        <div class="side-panel">
+            <a class="side-panel-item" data-title="Позвонить" href="tel:+79501081773">
+                <svg>
+                    <use xlink:href="img/svg/icons.svg#phone"></use>
+                </svg>
+            </a>
+            <a class="side-panel-item" data-title="Email" href="mailto:fl-jenya@yandex.ru">
+                <svg>
+                    <use xlink:href="img/svg/icons.svg#mail"></use>
+                </svg>
+            </a>
+            <a class="side-panel-item" data-title="Whatsapp" href="https://api.whatsapp.com/send?phone=79501081773">
+                <svg>
+                    <use xlink:href="img/svg/icons.svg#whatsapp"></use>
+                </svg>
+            </a>
         </div>
-
-
-
         <header class="header">
             <div class="header-container _container">
 
@@ -58,27 +44,16 @@
                 </div>
 
                 <h1>Евгений Мясников</h1>
-                <h2>Сайт находится на стадии разработки</h2>
+                <!-- <h2>Сайт находится на стадии разработки</h2> -->
 
             </div>
         </header>
 
         <main>
-            <!-- <section id="page">
-                <div class="_container">
-                    <h2 class="_page-title">FIRST PAGE</h2>
-                    <br>
-                    <h3>Веб-сайты созданные мной, оптимизированы для SEO. У вас не возникнет трудностей с продвижением
-                        сайта в поисковых системах.</h3>
 
 
-                </div>
-
-
-            </section> -->
-
-
-            <section id="portfolio" class="portfolio">
+            <section data-add-header-menu-path="portfolio" data-add-header-menu-text="Портфолио" id="portfolio"
+                class="portfolio">
                 <div class="portfolio-container _container">
                     <h2 class="_page-title">Портфолио</h2>
                     <span>Мои работы</span>
@@ -91,113 +66,95 @@
                     </menu>
                     <div class="my-works">
                         <div class="work" data-all data-category="1">
-                            <img src="img/my_works/auto.png" alt="">
+                            <img src="img/my_works/auto.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт автомастерской</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="2">
-                            <img src="img/my_works/dezinsector.png" alt="">
+                            <img src="img/my_works/dezinsector.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт Дезинсектора</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="3">
-                            <img src="img/my_works/grid.png" alt="">
+                            <img src="img/my_works/grid.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт на grid</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="1">
-                            <img src="img/my_works/lawyer.png" alt="">
+                            <img src="img/my_works/lawyer.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт адвоката</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="4">
-                            <img src="img/my_works/meban.png" alt="">
+                            <img src="img/my_works/meban.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт корпусной мебели</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="2">
-                            <img src="img/my_works/portfolio.png" alt="">
+                            <img src="img/my_works/portfolio.webp" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт портфолио</h4>
+                            </div>
                         </div>
                         <div class="work" data-all data-category="3">
                             <img src="img/my_works/zamokservis.jpg" alt="">
+                            <div class="work-more">
+                                <a href="#" class="work-more-link">
+                                    <svg>
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </a>
+                                <h4 class="work-more-title">Сайт Вскрытие замков</h4>
+                            </div>
                         </div>
                     </div>
                     <button class="_btn">Смотреть все работы</button>
 
                 </div>
             </section>
-            <!-- <section id="anyPage">
-                <div class="_container">
-
-                    <h2 class="_page-title">ANY PAGE </h2>
-                    <br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae possimus, reiciendis beatae,
-                    tempore
-                    magnam quos perferendis nemo illum mollitia eum quis ipsum velit repellat voluptate, recusandae
-                    quam
-                    voluptates exercitationem molestiae.
-                    Eaque, sed omnis rerum nihil error perferendis fuga quibusdam sequi possimus ex aliquam consectetur
-                    veniam libero molestiae maiores voluptatibus impedit sapiente doloribus enim recusandae? Magnam
-                    laboriosam tempore vitae illum fugiat.
-                    Magnam aperiam, consequatur assumenda molestias placeat laboriosam? Corrupti culpa, impedit iusto
-                    praesentium beatae eaque alias deserunt nihil quam provident, et laudantium, magni iste cumque
-                    excepturi perferendis incidunt sint velit veniam.
-                    Possimus consectetur, quisquam provident fugit non, itaque explicabo repellendus porro eius
-                    accusamus saepe dolorem necessitatibus nihil maiores sapiente? Nesciunt corrupti animi, aperiam
-                    quae
-                    commodi quo perferendis quisquam cupiditate ab impedit?
-                    Ex, optio! Reprehenderit suscipit, minus quas nulla debitis, nihil ratione placeat explicabo velit
-                    dignissimos corrupti facilis recusandae saepe, hic deserunt asperiores laboriosam! Excepturi
-                    laboriosam non suscipit neque itaque. Ipsa, optio.
-                    Labore ipsam, dolore modi iure distinctio reiciendis ipsum animi, dicta eaque fuga accusantium
-                    voluptas tenetur eligendi quibusdam vel minus ut amet veniam obcaecati? Quaerat, recusandae iste
-                    totam neque temporibus inventore.
-                    Accusamus alias vel atque id, corrupti incidunt error dolorum suscipit dolore eos ipsam officiis
-                    odio explicabo sequi repellat, ad voluptatem enim laboriosam sed. Nemo consectetur recusandae at
-                    exercitationem excepturi fugiat!
-                    Dolore libero voluptas praesentium. Nemo, laboriosam eum deleniti sint iure deserunt possimus
-                    quibusdam tempore beatae amet veniam rem necessitatibus unde autem, sit ratione praesentium
-                    expedita
-                    vitae nihil id odio fuga.
-                    Recusandae aliquid eius consequuntur! Quidem fuga hic eligendi sunt eius? Quia quibusdam fugiat
-                    repellat repudiandae amet harum nulla commodi quisquam eveniet assumenda nihil accusamus, dolor
-                    dolore corrupti architecto, cum facere.
-                    Saepe fugiat adipisci, dignissimos distinctio corporis quibusdam, praesentium, aliquid expedita
-                    modi
-                    soluta fugit esse suscipit. Consequuntur doloremque inventore at. Natus cumque itaque expedita ad
-                    quisquam quod aliquid dicta saepe est.
-                    Earum eveniet illo voluptatem itaque, ex, ut id iure facere, similique veritatis nobis maiores
-                    consequuntur ducimus architecto illum assumenda. Iusto, dolorem! At temporibus harum cumque
-                    excepturi ullam voluptas maiores modi?
-                    Corrupti alias tempora labore voluptatibus optio aut obcaecati consectetur, porro dolorum fugiat
-                    eveniet esse dolores quas laborum facilis mollitia nemo? Voluptatem necessitatibus numquam fugiat
-                    atque asperiores incidunt excepturi, maxime doloremque?
-                    Repudiandae eos nemo optio soluta cupiditate eum quaerat beatae, distinctio hic nulla voluptate.
-                    Voluptatum praesentium libero itaque repudiandae eveniet magni excepturi! Reiciendis odio,
-                    excepturi
-                    totam ad velit obcaecati optio quos!
-                    Commodi ex officia laborum tenetur id consequuntur dolorem explicabo et architecto debitis culpa
-                    odio iusto repudiandae veritatis fuga repellendus ipsam impedit, expedita tempore quaerat deserunt
-                    minus facilis esse distinctio? Repellendus!
-                    Consequuntur odit voluptatem, nostrum corrupti ipsa numquam deserunt placeat exercitationem enim
-                    quam mollitia repudiandae? Deleniti neque ea quo, labore quidem quia quaerat nostrum, culpa
-                    quibusdam, ipsum iusto ex ducimus harum!
-                    Rem at commodi debitis sit eaque blanditiis quasi sed tempore cupiditate tenetur, incidunt
-                    exercitationem repudiandae quod. Aspernatur at nisi, earum numquam vitae dicta, distinctio
-                    explicabo
-                    autem hic cupiditate fugit repellendus.
-                    Incidunt sapiente autem tempore minus ipsum, minima qui voluptatum veniam, omnis eum quae laborum
-                    libero hic provident soluta id magni deleniti debitis labore vel dicta! Quas odio laudantium
-                    eligendi itaque?
-                    Pariatur, saepe? Ut aspernatur libero culpa quam provident tempora, at minus quaerat soluta atque
-                    voluptates perferendis, deleniti sequi nam repellendus, odio sit non! Velit quibusdam mollitia
-                    nihil, illum modi necessitatibus.
-                    Veritatis consequatur exercitationem ratione minus amet a fuga perspiciatis dolorum unde maxime
-                    possimus in sit architecto eius, praesentium odio ad ipsum non nam corporis modi. Temporibus
-                    placeat
-                    doloremque deserunt quibusdam!
-                    Nemo totam dignissimos vitae tempora eum officiis dolor saepe illum ipsum sint ab, odit quidem
-                    deserunt, aperiam, non in? Facilis vero cum ab, molestiae alias qui numquam ipsa veniam ratione.
-                </div>
-            </section> -->
         </main>
-        <section id="contacts">
+        <section data-add-header-menu-path="contacts" data-add-header-menu-text="Контакты" id="contacts">
             <div class="_container">
                 <h2 class="_page-title">Контакты</h2>
                 <div class="forms">
                     <div class="contact-form">
                         <fieldset class="field">
-                            <legend>Мои контакты:</legend>
+                            <legend> <span> Мои контакты: </span></legend>
 
                             <a class="link-tel" href="tel:+79501081773">8 (950) 108-17-73</a>
 
@@ -206,15 +163,16 @@
 
                     <form class="contact-form" name="form-footer" method="post" action="#">
                         <fieldset class="field">
-                            <legend class="field-title">Напишите мне:</legend>
+                            <legend class="field-title"> <span>Напишите мне:</span></legend>
 
-                            <label class="field-name"> Как Вас зовут? <input type="text"></label>
+                            <label class="field-name"> Как Вас зовут? <input type="text" name="fieldName"></label>
                             <label class="field-contact"> Ваш телефон для связи:
-                                <input type="tel" name="phone">
+                                <input type="tel" name="fieldPhone">
                             </label>
-                            <label class="field-message"> Сообщение: <textarea cols="30" rows="10">sum text</textarea>
+                            <label class="field-message"> Сообщение: <textarea name="fieldMessage" cols="30"
+                                    rows="10">sum text</textarea>
                             </label>
-                            <input class="_btn" type="submit" value="Send">
+                            <button class="_btn" type="submit">Отправить</button>
                         </fieldset>
                     </form>
 
