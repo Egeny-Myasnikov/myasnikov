@@ -1,11 +1,13 @@
-@import '../otherStyles/vars'; 
+@import '../otherStyles/vars';
+
 .forms {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
 
-    .link-tel{
-        color:$text-color;
+    .link-tel {
+        color: $text-color;
     }
-    
+
 }

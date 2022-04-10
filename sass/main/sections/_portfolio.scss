@@ -2,16 +2,18 @@
 @import '../../otherStyles/vars';
 @import '../../otherStyles/parts/more';
 
-.filter{
+.filter {
     margin: 50px 0 20px 0;
 }
-.my-works{
+
+.my-works {
     margin: 50px 0;
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(4, 300px);
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-start;
     align-items: center;
+
     .work {
         width: 300px;
         height: 300px;
@@ -21,31 +23,127 @@
         align-items: start;
         background-color: rgba(206, 206, 206, 0.295);
         position: relative;
-        border-radius:10px;
-
+        border-radius: 10px;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        &::before{
-            content:'\2234';
+
+        &::before {
+            content: '\2234';
             z-index: -1;
             width: 100%;
             height: 100%;
             @include flex-center;
             position: absolute;
             background-color: rgba(255, 255, 255, 0.288);
-            color:$button-color-first;
+            color: $button-color-first;
             text-shadow: 0px 0px 20px $button-color-second;
             font-size: 20em;
         }
+
+        &-more {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10%;
+            height: 10%;
+            background: linear-gradient($button-color-first, $button-color-second);
+            border-radius: 50% 0 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: .2s ease-in-out;
+            opacity: 1;
+
+
+            &-title {
+                color: #ddd;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.15);
+                font-size: 1.5em;
+                text-shadow: 0 0 3px #000;
+                transform: translateX(110%);
+                opacity: 0;
+            }
+
+            &-link {
+                background-color: rgba(255, 255, 255, 0.15);
+                width: 25%;
+                height: 25%;
+                border-radius: 50%;
+                padding: 20px;
+                transform: translateX(-310%);
+                opacity: 0;
+                position: relative;
+
+                &::before {
+                    content: 'Перейти на сайт';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    color: #333;
+                    font-size: .7em;
+                    padding: 10px;
+                    border-radius: 10px;
+                    transition: .2s ease-in-out;
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    transition: .2s ease-in-out;
+                    fill: #ddd;
+                    transform: rotate(135deg);
+
+                }
+
+                &:hover::before {
+                    opacity: 0.7;
+                    transition: .2s ease-in-out;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    transition: .2s ease-in-out;
+                }
+
+                &:hover>svg {
+                    fill: transparent;
+                    transition: .2s ease-in-out;
+
+                }
+
+            }
+        }
+
+        &:hover .work-more {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: .2s ease-in-out;
+        }
+
+        &:hover .work-more-title {
+            transform: translateX(0%);
+            opacity: 1;
+            transition: .5s .5s ease-in-out;
+        }
+
+        &:hover .work-more-link {
+            transform: translateX(0%) rotate(360deg);
+            opacity: 1;
+            transition: .7s ease-in-out;
+        }
+
+
     }
 }
-
-
-
-
-
-
